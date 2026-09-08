@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS styling -->
+<!-- page uses MSSU colors -->
+<style>
+  body {
+    color: #00693E;
+    background-color: #F5CF47;
+  }
+
+  ol {
+    font-style: italic;
+  }
+</style>
+
+<title>HTML Review Assignment</title>
+</head>
+<body>
+
+  <p title="Assignment Information">
+    Brian Brown, S00709110<br>
+    Dr. Bhavana Bhardwaj<br>
+    CIS 0340 Website Administration II<br>
+    M, W 10:00 - 10:50 a.m.<br>
+    Due Date: 09/04/26
+  </p>
+
+  <h2>HTML Review Assignment</h2> <!-- Heading -->
+  <h3>Question 1</h3>
+
+  <!-- question instructions provided -->
+  <p>Question 1: Create and test an HTML document that has a form with the following controls:</p>
+
+    <ul>
+      <li>A text box to collect the user’s name<br><br></li>
+
+      <li>Four checkboxes, one each for the following items:
+        <ol type="i">
+          <li>Four 25-watt light bulbs for $2.39</li>
+          <li>Eight 25-watt light bulbs for $4.29</li>
+          <li>Four 25-watt long-life light bulbs for $3.95</li>
+          <li>Eight 25-watt long-life light bulbs for $7.49</li>
+        </ol>
+        <br>
+      </li>
+
+      <li>A collection of three radio buttons that are labeled as follows:
+        <ol type="i">
+          <li>Visa</li>
+          <li>Master Card</li>
+          <li>Discover</li>
+        </ol>
+      </li>
+    </ul>
+
+  <hr>
+
+  <!-- form for name, checkboxes and radio buttons -->
+  <form>
+    
+    <h3>Name</h3>
+    <label for = "firstName">First name:</label><br>
+    <input type = "text" id = "firstName" name = "firstName" size = "10">
+    <br><br>
+    <label for = "lastName">Last name:</label><br>
+    <input type = "text" id ="lastName" name = "lastName" size = "10" >
+    
+    <br><br>
+
+    <h3>Light Bulbs</h3>
+
+    <!-- light bulb choices are divided into two sections -->
+    <h4>25-watt light bulbs</h4>
+
+    <!-- each checkbox has a type, unique ID, shared name, and unique value -->
+    <!-- matching for and id values connect each label to its checkbox -->
+    <input type = "checkbox" id = "fourRegular" name = "lightBulbs" value = "fourRegular">
+    <label for = "fourRegular"> Four 25-watt light bulbs for $2.39</label>
+    &nbsp;&nbsp;&nbsp; <!-- 3 spaces between two checkboxes -->
+    
+    <input type = "checkbox" id = "eightRegular" name = "lightBulbs" value = "eightRegular">
+    <label for = "eightRegular"> Eight 25-watt light bulbs for $4.29</label>
+
+    <h4>25-watt long-life light bulbs</h4>
+    <input type = "checkbox" id = "fourLongLife" name = "lightBulbs" value = "fourLongLife">
+    <label for = "fourLongLife"> Four 25-watt long-life light bulbs for $3.95</label>
+     &nbsp;&nbsp;&nbsp; <!-- 3 spaces between two checkboxes -->
+
+     <input type = "checkbox" id = "eightLongLife" name = "lightBulbs" value = "eightLongLife">
+    <label for = "eightLongLife"> Eight 25-watt long-life light bulbs for $7.49</label>
+    
+    <!-- each radio button has a type, unique ID, and unique value -->
+    <!-- they share the same name so they operate as one group -->
+    <h3>Payment Type</h3>
+    <input type = "radio" id = "visa" name = "payment" value = "Visa">
+    <label for = "visa">Visa</label><br>
+
+    <input type = "radio" id = "masterCard" name = "payment" value = "Master Card">
+    <label for = "masterCard">Master Card</label><br>
+
+    <input type = "radio" id = "discover" name = "payment" value = "Discover">
+    <label for = "discover">Discover</label>
+
+  </form>
+
+  <br><br>
+
+  </body>
+</html>

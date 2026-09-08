@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS styling -->
+  <!-- page uses MSSU colors -->
+  <style> 
+    th, td {
+      padding: 8px;
+    }
+    
+    td {
+      text-align: center;
+    }
+
+    .rowHeader {
+      text-align: left;
+    }
+
+    body {
+      color: #00693E;
+      background-color: #F5CF47;
+    }
+
+  </style>
+
+<title>HTML Review Assignment</title>
+</head>
+<body>
+
+  <p title="Assignment Information">
+    Brian Brown, S00709110<br>
+    Dr. Bhavana Bhardwaj<br>
+    CIS 0340 Website Administration II<br>
+    M, W 10:00 - 10:50 a.m.<br>
+    Due Date: 09/04/26
+  </p>
+
+  <h2>HTML Review Assignment</h2>
+  <h3>Question 2</h3>
+
+  <!-- question instructions provided -->
+  <p>Question 2: Create and test an HTML document that defines a table with two levels of column labels:</p>
+
+  <ul>
+    <li>Overall label: “Meals”</li>
+
+    <li>Three secondary labels: “Breakfast,” “Lunch,” and “Dinner”</li>
+
+    <li>There must be two levels of row labels:
+      <ul>
+        <li>Overall label: “Foods”</li>
+        <li>Four secondary labels: “Bread,” “Main Course,” “Vegetable,” and “Dessert”</li>
+      </ul>
+    </li>
+
+  </ul>  
+
+  <hr><br>
+
+  <!-- table for grams of food types per meal -->
+  <table border = "2">
+    <!-- first cell is empty and spans 2 columns x 2 rows -->
+    <!-- overall label "Meals" cell spans 3 columns -->
+    <tr><th colspan = "2" rowspan = "2"></th>
+      <th colspan = "3">Meals</th></tr>
+  
+    <!-- new row with 3 secondary meal column headers -->  
+    <tr><th>Breakfast</th>
+    <th>Lunch</th>
+    <th>Dinner</th></tr>
+
+    <!-- new row with Overall "Foods" label spans 4 rows -->
+    <!-- new row header uses a class for left alignment -->  
+    <!-- remaining cells in row are data cells -->
+    <tr><th rowspan = "4">Foods</th>
+        <th class = "rowHeader">Bread</th>
+          <td>97</td>
+          <td>107</td>
+          <td>117</td>
+    </tr>
+
+    <!-- new row header uses a class for left alignment -->  
+    <!-- remaining cells in row are data cells -->
+    <tr><th class = "rowHeader">Main Course</th>
+        <td>88</td>
+        <td>98</td>
+        <td>108</td>
+    </tr>
+
+    <!-- new row header uses a class for left alignment -->  
+    <!-- remaining cells in row are data cells -->
+    <tr><th class = "rowHeader">Vegetable</th>
+        <td>55</td>
+        <td>65</td>
+        <td>75</td>
+    </tr>
+
+    <!-- new row header uses a class for left alignment -->  
+    <!-- remaining cells in row are data cells -->
+    <tr><th class = "rowHeader">Dessert</th>
+        <td>544</td>
+        <td>962</td>
+        <td>1200</td>
+    </tr>
+  </table>
+
+  <br><br>
+
+  </body>
+</html>
