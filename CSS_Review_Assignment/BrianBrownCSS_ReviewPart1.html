@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Using external CSS styling sheet -->
+  <link rel="stylesheet" href="styles.css">
+
+<title>CSS Review Assignment, Part 1</title>
+</head>
+<body>
+
+  <!-- div section for providing assignment information -->
+  <div title="Assignment Information" class="assignmentInfo">
+    Brian Brown, S00709110<br>
+    Dr. Bhavana Bhardwaj<br>
+    CIS 0340 Website Administration II<br>
+    M, W 10:00 - 10:50 a.m.<br>
+    CSS Review Assignment, Part 1<br>
+    Due Date: 09/14/26
+  </div>
+
+<!-- Assignment Instructions:
+  
+Create and test an HTML document that describes nested ordered lists of cars.
+ 
+The outer list must have three entries: compact, midsize, and sports.
+
+Inside each of these three lists there must be two sublists of body styles.
+The compact- and midsize-car sublists are two door and four door;
+the sports-car sublists are coupe and convertible.
+
+Each body-style sublist must have at least three entries, each of which is the make
+and model of a particular car that fits the category.
+
+The outer list must use uppercase Roman numerals, the middle lists must use uppercase
+letters, and the inner lists must use Arabic numerals.
+
+The background color for the compact-car list must be pink;
+for the midsize-car list, it must be blue;
+for the sports-car list, it must be red.
+
+All the styles must be in a document style sheet. -->
+
+    <ol type = "I"> <!-- Roman numerals-->
+
+      <!-- Compact vehicle section -->
+      <li class="compact">Compact <!-- Class definition implements the css styling -->
+        <ol type = "A"> <!-- Standard lettering -->
+
+          <!-- Subsections of 2 and 4 door vehicles -->
+          <li>Two-Door
+            <ol type = "1"> <!-- Arabic numerals -->
+              <li>Honda Civic Coupe</li>
+              <li>MINI Cooper Hardtop</li>
+              <li>Volkswagen Beetle</li>
+            </ol>
+          </li>
+          
+          <li>Four-Door
+            <ol type = "1">
+              <li>Toyota Corolla</li>
+              <li>Hyundai Elantra</li>
+              <li>Mazda 3 Sedan</li>
+            </ol>
+          </li>
+
+        </ol>
+      </li>
+
+      <!-- Midsize vehicle section -->
+      <li class="midsize">Midsize
+        <ol type = "A">
+
+          <!-- Subsections of 2 and 4 door vehicles -->
+          <li>Two-Door
+            <ol type = "1">
+              <li>Honda Accord Coupe</li>
+              <li>Nissan Altima Coupe</li>
+              <li>Toyota Solara</li>
+            </ol>
+          </li>
+          
+          <li>Four-Door
+            <ol type = "1">
+              <li>Toyota Camry</li>
+              <li>Subaru Legacy</li>
+              <li>Chevrolet Malibu</li>
+            </ol>
+          </li>
+
+        </ol>
+      </li>
+
+      <!-- Sport vehicle section -->
+      <li class="sports">Sports
+        <ol type = "A">
+
+          <!-- Subsections of coupe & convertible vehicles -->
+          <li>Coupe
+            <ol type = "1">
+              <li>Chevrolet Corvette</li>
+              <li>Porsche 911 Carrera</li>
+              <li>Ford Mustang GT</li>
+            </ol>
+          </li>
+          
+          <li>Convertible
+            <ol type = "1">
+              <li>Mazda MX-5 Miata</li>
+              <li>BMW Z4 Roadster</li>
+              <li>Audi TT Roadster</li>
+            </ol>
+          </li>
+
+        </ol>
+      </li>
+
+    </ol>
+
+  </body>
+</html>

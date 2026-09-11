@@ -1,0 +1,35 @@
+
+/*
+Brian Brown, S00709110
+Dr. Bhavana Bhardwaj
+CIS 0340 Website Administration II
+M, W 10:00 - 10:50 a.m.
+CSS Review Assignment, Part 1
+Due Date: 09/14/26
+
+
+From the assignment instructions:
+The background color for the compact-car list must be pink;
+for the midsize-car list, it must be blue;
+for the sports-car list, it must be red.
+*/
+
+  .compact {
+    background-color: pink;
+  }
+
+  .midsize {
+    background-color: blue;
+    
+    /* wasn't asked for but can't read the black text with the blue background */
+    color: grey ; 
+  }
+
+  .sports {
+    background-color: red;
+  }
+  
+  /* <div> doesn't have automatic spacing below like <p> */
+  .assignmentInfo {
+    margin-bottom: 20px;
+  }
