@@ -1,0 +1,208 @@
+<!--
+ Question 1: Develop and test an HTML document that collects the
+ following information from the user: last name, first name, middle
+ initial, age (restricted to be greater than 17), and weight
+ (restricted to the range from 80 to 300). You must have event
+ handlers for the form elements that collect this information.
+ 
+ These handlers must check the input data for correctness. Messages
+ in alert windows must be produced when errors are detected. 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- div section for providing assignment information -->
+    <div title="Assignment Information" class="assignmentInfo">
+        Brian Brown, S00709110<br>
+        Dr. Bhavana Bhardwaj<br>
+        CIS 0340 Website Administration II<br>
+        M, W 10:00 - 10:50 a.m.<br>
+        DOM ASSIGNMENT, Question 1<br>
+        Due Date: 10/21/26
+    </div>
+
+      <br><br>
+   
+      <!-- user input form -->
+      <form id="inputForm">
+
+        <!-- last name -->
+        <label for="contactLastName">Last Name:</label>
+        <input type="text"
+         id="contactLastName"
+         name="contactLastName"
+         maxlength="50"
+         required>
+
+        <br><br>
+
+        <!-- first name -->
+        <label for="contactFirstName">First Name:</label>
+        <input type="text"
+         id="contactFirstName"
+         name="contactFirstName"
+         maxlength="50"
+         required>
+
+        <br><br>
+
+        <!-- moiddle initial -->
+        <label for="contactMiddleInitial">Middle Initial:</label>
+        <input type="text"
+         id="contactMiddleInitial"
+         name="contactMiddleInitial"
+         maxlength="1"
+         size="2"
+         required>
+
+        <br><br>
+
+        <!-- age -->
+        <label for="contactAge">Age:</label>
+        <input type="number"
+         id="contactAge"
+         name="contactAge"
+         min="18"
+         style="width: 60px;"
+         required>
+
+        <br><br>
+
+        <!-- weight -->
+        <label for="contactWeight">Weight:</label>
+        <input type="number"
+         id="contactWeight"
+         name="contactWeight"
+         min="80"
+         max="300"
+         style="width: 60px;"
+         required>
+
+        <br><br>
+
+      <button type="submit" id="submitButton">Submit</button> <!--  button element -->
+
+    </form>
+
+    <script>
+        // get last name input
+        const lastName = document.getElementById("contactLastName");
+
+        // check last name when changed
+        lastName.addEventListener("change", function () {
+            if (lastName.value.trim() === "") {
+                alert("Please enter your last name.");
+            }
+        });
+    
+        // get first name input
+        const firstName = document.getElementById("contactFirstName");
+
+        // check first name when changed
+        firstName.addEventListener("change", function () {
+            if (firstName.value.trim() === "") {
+                alert("Please enter your first name.");
+            }
+        });
+    
+        // get middle initial input
+        const middleInitial = document.getElementById("contactMiddleInitial");
+
+        // check middle initial when changed
+        middleInitial.addEventListener("change", function () {
+            if (middleInitial.value.trim() === "") {
+                alert("Please enter your middle initial.");
+            } else if (middleInitial.value.toUpperCase() < "A" ||
+                      middleInitial.value.toUpperCase() > "Z") {
+                alert("Please enter a letter for your middle initial.");
+            }
+        });
+    
+        // get age input
+        const age = document.getElementById("contactAge");
+
+        // check age when changed
+        age.addEventListener("change", function () {
+            if (age.value === "") {
+                alert("Please enter your age.");
+            } else if (age.value <= 17) {
+                alert("Age must be greater than 17.");
+            }
+        });
+    
+        // get weight input
+        const weight = document.getElementById("contactWeight");
+
+        // check weight when changed
+        weight.addEventListener("change", function () {
+            if (weight.value === "") {
+                alert("Please enter your weight.");
+            } else if (weight.value < 80 ||
+                  weight.value > 300) {
+                alert("Weight must be between 80 and 300.");
+            }
+        });
+        
+        // get submit button
+        const submitButton = document.getElementById("submitButton");
+
+        // entry validation
+        // check for empty fields when submit button clicked
+        submitButton.onclick = function () {
+
+          // check last name field and if empty, shows alert window
+            if (lastName.value.trim() === "") {
+                alert("Please enter your last name.");
+
+                // puts cursor back in last name field
+                lastName.focus();
+                
+                // prevents submission if field is empty
+                return false;
+            }
+
+            // check first name field
+            if (firstName.value.trim() === "") {
+                alert("Please enter your first name.");
+                firstName.focus();
+                return false;
+            }
+
+            // check middle initial field
+            if (middleInitial.value.trim() === "") {
+                alert("Please enter your middle initial.");
+                middleInitial.focus();
+                return false;
+            }
+
+            // check age field
+            if (age.value === "") {
+                alert("Please enter your age.");
+                age.focus();
+                return false;
+            }
+
+            // check weight field
+            if (weight.value === "") {
+                alert("Please enter your weight.");
+                weight.focus();
+                return false;
+            }
+
+            // allows submission if no fields are empty
+            return true;
+        };
+    
+    </script>
+
+
+
+</body>
+
+</html>

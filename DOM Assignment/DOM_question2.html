@@ -1,0 +1,57 @@
+<!--
+ Question 2: Develop and test an HTML document and a JavaScript script
+ to draw a filled square with an empty circle inside it.  
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- div section for providing assignment information -->
+    <div title="Assignment Information" class="assignmentInfo">
+        Brian Brown, S00709110<br>
+        Dr. Bhavana Bhardwaj<br>
+        CIS 0340 Website Administration II<br>
+        M, W 10:00 - 10:50 a.m.<br>
+        DOM ASSIGNMENT, Question 2<br>
+        Due Date: 10/21/26
+    </div>
+
+    <br><br>
+
+    <canvas id="drawingCanvas" width="300" height="300">
+        Your browser does not support canvas.
+    </canvas>
+
+    <script>
+        // get canvas and its drawing context
+        const canvas = document.getElementById("drawingCanvas");
+        const context = canvas.getContext("2d");  // set up 2D drawing
+
+        // draw filled square
+        // style makes square light blue
+        context.fillStyle = "lightblue";
+        // start square at (25, 25), width 250 and height 250 pixels
+        context.fillRect(25, 25, 250, 250);
+
+        // empty circle inside the square
+        context.beginPath(); // start circle
+
+        // circle center at starting point + 1/2 square side length
+        // (150, 150), radius 100, from starting point 0 (3 o'clock) to
+        // 2 * PI (360 degrees) for full circle
+        context.arc((25+(250/2)), (25+(250/2)), 100, 0, 2 * Math.PI);
+
+        // draw circle outline ("empty circle")
+        // Style makes circle outline dk green
+        context.strokeStyle = "dkgreen";
+        context.stroke();
+
+    </script>
+
+</body>
+</html>
